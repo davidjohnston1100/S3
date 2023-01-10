@@ -16,4 +16,9 @@ resource "aws_s3_bucket_versioning" "this" {
     status = "Enabled"
   }
 }
+  
+resource "aws_s3_bucket_accelerate_configuration" "this" {
+  bucket = aws_s3_bucket.thiws.bucket
+  status = "Enabled"
+}
 
