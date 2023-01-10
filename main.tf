@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "this" {
   bucket = var.bucket_name
   acl    = "private"
   object_lock_configuration {
-    object_lock_enabled = "Enabled"
+    object_lock_enabled = var.object_lock
 }
 
 resource "aws_s3_bucket_acl" "this" {
@@ -13,13 +13,13 @@ resource "aws_s3_bucket_acl" "this" {
 resource "aws_s3_bucket_versioning" "this" {
   bucket = aws_s3_bucket.this.id
   versioning_configuration {
-    status = "Enabled"
+    status = var.versioning_configuration
   }
 }
   
 resource "aws_s3_bucket_accelerate_configuration" "this" {
   bucket = aws_s3_bucket.this.bucket
-  status = "Enabled"
+  status = var.bucket_accelerate
 }
   
 resource "aws_kms_key" "this" {
@@ -37,4 +37,3 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "this" {
     }
   }
 }  
-
