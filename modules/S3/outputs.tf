@@ -12,3 +12,8 @@ output "iam_role_id" {
   description = ""
   value       = aws_iam_role.ec2_role.id
 }
+
+output "iam_policy_arn" {
+  description = ""
+  value       = aws_iam_policy.s3_access.arn
+}
