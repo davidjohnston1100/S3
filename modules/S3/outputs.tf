@@ -17,3 +17,8 @@ output "iam_policy_arn" {
   description = ""
   value       = aws_iam_policy.s3_access.arn
 }
+
+output "aws_iam_instance_profile_arn" {
+  description = ""
+  value       = aws_iam_instance_profile.ec2_s3_read_write_access.arn
+}
