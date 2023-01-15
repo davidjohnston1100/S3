@@ -1,7 +1,7 @@
 variable "bucket_name" {
   description = "Name of bucket"
   type        = string
-  default     = ""
+  default     = "1-15-2023-s3-testbucket9798"
 }
 
 variable "object_lock" {
