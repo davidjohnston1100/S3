@@ -5,5 +5,5 @@ output "s3_bucket_arn" {
 
 output "iam_role_arn" {
   description = "S3 bucket arn"
-  value       = aws_iam_role.this.arn
+  value       = aws_iam_role.ec2_role.arn
 }
