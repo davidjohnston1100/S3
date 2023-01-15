@@ -21,5 +21,5 @@ module "S3" {
   #iam_instance_profile = module.S3.iam_role_arn
   #iam_instance_profile =  module.S3.iam_role_policy_attachment_arn
   #iam_instance_profile = module.S3.iam_policy_arn
-  iam_instance_profile =  module.S3.aws_iam_instance_profile_arn
+  iam_instance_profile =  module.S3.aws_iam_instance_profile_id
 }
