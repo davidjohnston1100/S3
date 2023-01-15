@@ -21,4 +21,3 @@ variable "bucket_accelerate" {
   type        = string
   default     = ""Enabled""
 }
-
