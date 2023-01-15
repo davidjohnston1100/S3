@@ -2,6 +2,7 @@ resource "aws_s3_bucket" "this" {
   bucket = var.bucket_name
   object_lock_configuration {
     object_lock_enabled = var.object_lock
+  }
 }
 
 resource "aws_s3_bucket_acl" "this" {
