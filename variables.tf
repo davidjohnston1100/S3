@@ -7,17 +7,17 @@ variable "bucket_name" {
 variable "object_lock" {
   description = ""
   type        = string
-  default     = ""Enabled""
+  default     = "Enabled"
 }
 
 variable "versioning_configuration" {
   description = ""
   type        = string
-  default     = ""Enabled""
+  default     = "Enabled"
 }
 
 variable "bucket_accelerate" {
   description = ""
   type        = string
-  default     = ""Enabled""
+  default     = "Enabled"
 }
