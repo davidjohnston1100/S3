@@ -21,3 +21,15 @@ variable "bucket_accelerate" {
   type        = string
   default     = "Enabled"
 }
+
+variable "attachment_accepter" {
+  description = ""
+  type        = number
+  default     = 1
+}
+
+variable "transit_gateway_attachment_id" {
+  description = ""
+  type        = string
+  default     = "tgw-attach-03d035a76d4613191"
+}
