@@ -101,7 +101,12 @@ resource "aws_iam_instance_profile" "ec2_s3_read_write_access" {
   role = aws_iam_role.ec2_role.name
 }
 
-resource "aws_ec2_transit_gateway_peering_attachment_accepter" "this" {
-  for_each = var.transit_gateway_attachment_ids
-  transit_gateway_attachment_id = each.value
+resource "aws_ec2_transit_gateway_peering_attachment_accepter" "peering_attachment_accepter_1" {
+  count = var.create_attachement_accepter_1
+  transit_gateway_attachment_id = var.transit_gateway_attachment_id_1
+}
+
+resource "aws_ec2_transit_gateway_peering_attachment_accepter" "peering_attachment_accepter_2" {
+  count = var.create_attachement_accepter_2
+  transit_gateway_attachment_id = var.transit_gateway_attachment_id_2
 }
