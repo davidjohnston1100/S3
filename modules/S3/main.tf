@@ -102,11 +102,11 @@ resource "aws_iam_instance_profile" "ec2_s3_read_write_access" {
 }
 
 resource "aws_ec2_transit_gateway_peering_attachment_accepter" "peering_attachment_accepter_1" {
-  count = var.create_attachement_accepter_1 ? 0 : 1
+  count = var.create_attachment_accepter_1 ? 1 : 0
   transit_gateway_attachment_id = var.transit_gateway_attachment_id_1
 }
 
 resource "aws_ec2_transit_gateway_peering_attachment_accepter" "peering_attachment_accepter_2" {
-  count = var.create_attachement_accepter_2 ? 1 : 0
+  count = var.create_attachment_accepter_2 ? 1 : 0
   transit_gateway_attachment_id = var.transit_gateway_attachment_id_2
 }
