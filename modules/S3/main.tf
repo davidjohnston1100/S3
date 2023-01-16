@@ -103,4 +103,5 @@ resource "aws_iam_instance_profile" "ec2_s3_read_write_access" {
 
 resource "aws_ec2_transit_gateway_peering_attachment_accepter" "this" {
   for_each = var.transit_gateway_attachment_ids
+  transit_gateway_attachment_id = each.value
 }
