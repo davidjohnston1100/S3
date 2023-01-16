@@ -63,8 +63,7 @@ resource "aws_iam_policy" "s3_access" {
         "s3:ListBucket"
       ],
       "Resource": [
-        "arn:aws:s3:::${aws_s3_bucket.this.arn}",
-        "arn:aws:s3:::${aws_s3_bucket.this.arn}/*"
+        "arn:aws:s3:::${aws_s3_bucket.this.arn}"
       ]
     }
   ]
