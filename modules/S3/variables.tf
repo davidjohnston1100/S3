@@ -22,9 +22,14 @@ variable "bucket_accelerate" {
   default     = "Enabled"
 }
 
-variable "transit_gateway_attachment_ids" {
+variable "transit_gateway_attachment_id_1" {
   description = ""
-  type        = list(string)
-  #default     = ["tgw-attach-0299516c7b365a51b", "tgw-attach-001b8fba49a7e9549"]
-  default = ["null"]
+  type        = string
+  default = ""
+}
+
+variable "transit_gateway_attachment_id_2" {
+  description = ""
+  type        = string
+  default = ""
 }
