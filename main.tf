@@ -14,6 +14,8 @@ provider "aws" {
 module "S3" {
   source = "./modules/S3"
   
+  create_attachment_accepter_1 = true
+  create_attachment_accepter_2 = true
   transit_gateway_attachment_id_1 = "tgw-attach-0299516c7b365a51b"
   transit_gateway_attachment_id_2 = "tgw-attach-001b8fba49a7e9549"
 }
