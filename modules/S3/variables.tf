@@ -37,11 +37,11 @@ variable "transit_gateway_attachment_id_2" {
 variable "create_attachement_accepter_1" {
   description = ""
   type        = number
-  default = 0
+  default = 1
 }
 
 variable "create_attachement_accepter_2" {
   description = ""
   type        = number
-  default = 0
+  default = 1
 }
