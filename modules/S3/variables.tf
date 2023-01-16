@@ -22,14 +22,14 @@ variable "bucket_accelerate" {
   default     = "Enabled"
 }
 
-variable "attachment_accepter" {
+variable "create_peering_attachment_accepter" {
   description = ""
-  type        = number
-  default     = 1
+  type        = bool
+  default     = true
 }
 
-variable "transit_gateway_attachment_id" {
+variable "transit_gateway_attachment_ids" {
   description = ""
-  type        = string
-  default     = "tgw-attach-03d035a76d4613191"
+  type        = list(string)
+  default     = ["tgw-attach-0299516c7b365a51b", "tgw-attach-0f2568e9896b48335"]
 }
