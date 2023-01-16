@@ -24,7 +24,7 @@ variable "bucket_accelerate" {
 
 variable "transit_gateway_attachment_ids" {
   description = ""
-  type        = list(string)
+  type        = map(string)
   #default     = ["tgw-attach-0299516c7b365a51b", "tgw-attach-001b8fba49a7e9549"]
   default     = []
 }
