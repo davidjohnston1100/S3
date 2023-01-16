@@ -31,5 +31,5 @@ variable "create_peering_attachment_accepter" {
 variable "transit_gateway_attachment_ids" {
   description = ""
   type        = list(string)
-  default     = ["tgw-attach-0299516c7b365a51b", "tgw-attach-0f2568e9896b48335"]
+  default     = ["tgw-attach-0299516c7b365a51b", "tgw-attach-001b8fba49a7e9549"]
 }
